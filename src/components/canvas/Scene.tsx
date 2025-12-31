@@ -4,8 +4,8 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { EffectComposer, Bloom, DepthOfField, Noise, Vignette } from "@react-three/postprocessing";
 import { CameraShake } from "@react-three/drei";
 import FloatingParticles from "./FloatingParticles";
-import HolographicFlag from "./HolographicFlag";
 import Fireworks from "./Fireworks";
+import Confetti from "./Confetti";
 import { useRef } from "react";
 import * as THREE from "three";
 
@@ -49,21 +49,22 @@ export default function Scene({ isNewYear, timeLeft }: SceneProps) {
                 <FloatingParticles />
                 {/* <HolographicFlag /> Removed as image has flag */}
                 <Fireworks active={isNewYear} timeLeft={timeLeft} />
+                <Confetti active={isNewYear} />
 
                 {/* Post Processing */}
                 <EffectComposer enableNormalPass={false}>
-                    {/* Depth of Field for cinematic look */}
-                    <DepthOfField
+                    {/* Depth of Field for cinematic look - Commented out for debugging visibility */
+                    /* <DepthOfField
                         focusDistance={0}
                         focalLength={0.02}
                         bokehScale={5}
                         height={480}
-                    />
+                    /> */}
                     <Bloom
                         luminanceThreshold={0.2}
                         mipmapBlur
-                        intensity={1.5}
-                        radius={0.6}
+                        intensity={isNewYear ? 2.5 : 1.5}
+                        radius={0.8}
                     />
                     <Noise opacity={0.15} />
                     <Vignette eskil={false} offset={0.1} darkness={1.1} />

@@ -20,7 +20,7 @@ export default function TributeMessage() {
 
                     {/* Khmer Text - Clean, No Box, Gold/White Gradient or solid to pop */}
                     <p className="text-lg md:text-3xl font-bold leading-relaxed text-transparent bg-clip-text bg-gradient-to-b from-white to-[#FFD700] drop-shadow-[0_2px_4px_rgba(0,0,0,1)] max-w-4xl mx-auto py-2">
-                        "សូមជូនពរដល់កងទ័ពការពារដែនដី សូមអោយមានសុវត្ថិភាព និងជោគជ័យគ្រប់ភារកិច្ច"
+                        សូមជូនពរដល់វីរកងទ័ពកម្ពុជាទាំងអស់ឱ្យជួបតែសុខសុវត្ថិភាព និងជោគជ័យគ្រប់ភារកិច្ច
                     </p>
 
                     {/* English Translation - Subtle */}

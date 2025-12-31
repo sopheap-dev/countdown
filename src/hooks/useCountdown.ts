@@ -9,8 +9,8 @@ export interface TimeLeft {
 
 // TEST MODE: Countdown to 9:42 PM today
 const now = new Date();
-const TARGET_DATE = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 22, 2, 0); // 9:42 PM today
-// PRODUCTION: const TARGET_DATE = new Date("2026-01-01T00:00:00");
+const TARGET_DATE = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 22, 38, 50); // 9:42 PM today
+// const TARGET_DATE = new Date("2026-01-01T00:00:00");
 
 export function useCountdown() {
     const [timeLeft, setTimeLeft] = useState<TimeLeft>({
